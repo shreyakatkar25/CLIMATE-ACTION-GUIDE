@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<title>Climate Action Guide - Quiz</title>
+
+<style>
+body {
+    background-color: #f1fff2;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #2b9348;
+}
+
+nav {
+    background-color: #c7f9cc;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 15px;
+    color: #1b4332;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.question {
+    background: white;
+    padding: 15px;
+    border-left: 5px solid #2b9348;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+button {
+    background: #2b9348;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1b4332;
+}
+</style>
+
+<script>
+function checkQuiz() {
+    let score = 0;
+
+    if (document.getElementById("q1a").checked) score++;
+    if (document.getElementById("q2b").checked) score++;
+    if (document.getElementById("q3c").checked) score++;
+
+    document.getElementById("result").innerHTML = 
+        "Your Score: " + score + " / 3";
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>Climate Quiz</h1>
+
+<nav>
+  <a href="home.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="tips.html">Tips</a>
+  <a href="waste.html">Waste</a>
+  <a href="quiz.html">Quiz</a>
+  <a href="SDG13.html">SDG 13</a>
+</nav>
+
+<!-- Question 1 -->
+<div class="question">
+    <h3>1. What gas mainly causes global warming?</h3>
+    <input type="radio" name="q1" id="q1a"> CO₂<br>
+    <input type="radio" name="q1" id="q1b"> Oxygen<br>
+    <input type="radio" name="q1" id="q1c"> Nitrogen<br>
+</div>
+
+<!-- Question 2 -->
+<div class="question">
+    <h3>2. Which is a renewable energy source?</h3>
+    <input type="radio" name="q2" id="q2a"> Coal<br>
+    <input type="radio" name="q2" id="q2b"> Solar<br>
+    <input type="radio" name="q2" id="q2c"> Diesel<br>
+</div>
+
+<!-- Question 3 -->
+<div class="question">
+    <h3>3. What simple action helps reduce climate change?</h3>
+    <input type="radio" name="q3" id="q3a"> Using more plastic<br>
+    <input type="radio" name="q3" id="q3b"> Keeping lights ON<br>
+    <input type="radio" name="q3" id="q3c"> Planting trees<br>
+</div>
+
+<button onclick="checkQuiz()">Submit Quiz</button>
+
+<h2 id="result"></h2>
+
+</body>
+</html>
